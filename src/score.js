@@ -21,6 +21,23 @@ class Score {
       return this.getScore();
     } catch (err) { return err; }
   };
+
+  addScore=async ({ user, scoreNum }) => {
+    try {
+      const config = {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ user, score: scoreNum }),
+      };
+      const data = await fetch(this.baseUrl, config);
+      const res = await data.json();
+      this.scoreData.push(res);
+      return this.fetchScore();
+    } catch (err) { return err; }
+  }
 }
 
 export default Score;
