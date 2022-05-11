@@ -32,6 +32,7 @@ class Score {
         },
         body: JSON.stringify({ user, score: scoreNum }),
       };
+
       const data = await fetch(this.baseUrl, config);
       const res = await data.json();
       this.scoreData.push(res);
