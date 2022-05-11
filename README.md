@@ -11,6 +11,7 @@ The leaderboard website displays scores submitted by different players. It also 
 - CSS
 - JavaScript
 - webpack
+- Leaderboard API service.
 
 ## Live Demo
 [127.0.0.1:5500/index.html](http://127.0.0.1:5500/index.html)
